@@ -10,9 +10,9 @@
 
 <!-- ══ PWA: manifest + ícones ══ -->
 <link rel="manifest" href="./manifest.json">
-<link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="./icons/icon-512.png">
-<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="./icon-512.png">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
 
 <!-- ══ Physical device size detection — runs before paint ══ -->
 <script>
@@ -12841,8 +12841,8 @@ function toggleNotificationPermission() {
       navigator.serviceWorker.ready.then(reg => {
         reg.showNotification('MIG Finance', {
           body: 'Notificações ativadas! Você vai receber lembretes de agenda por aqui.',
-          icon: './icons/icon-192.png',
-          badge: './icons/icon-192.png',
+          icon: './icon-192.png',
+          badge: './icon-192.png',
           tag: 'mig-notif-welcome'
         });
       });
@@ -12884,8 +12884,8 @@ function checkScheduleReminderPush() {
       const title = kind === 'overdue' ? '⚠️ Transação atrasada' : kind === 'today' ? '📌 Vence hoje' : '⏰ Vence em 3 dias';
       reg.showNotification(title, {
         body: `${it.desc} — ${fmtBRL(it.amount)} em ${dateLabel(it.date)}`,
-        icon: './icons/icon-192.png',
-        badge: './icons/icon-192.png',
+        icon: './icon-192.png',
+        badge: './icon-192.png',
         tag: 'mig-sched-' + it.id,
         vibrate: [100, 50, 100],
         data: { schedId: it.id }
